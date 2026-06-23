@@ -1,0 +1,9 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.fa-code {
+    color: #00F0FF; /* Your signature cyan */
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* Glow effect */
+}
