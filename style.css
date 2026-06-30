@@ -7,3 +7,26 @@ body {
     font-size: 2rem;
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* Glow effect */
 }
+.VW {
+    color: #2EC4B6;
+    
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #F8F9FA;
+  background: #0A0A0F;
+  line-height: 1.6;
+  text-align: left;
+}
+nav {
+    font-weight: bold;
+}
+li > a {
+    color: #00B4D8;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+}
