@@ -21,12 +21,17 @@ body {
   line-height: 1.6;
   text-align: left;
 }
-nav {
+nav ul {
     font-weight: bold;
 }
-li > a {
+li {
+    list-style: none;
+}
+.works{
+    color: #F8F9FA;
+}
+li a {
     color: #00B4D8;
     text-decoration: none;
-    margin-left: 15px;
     display: inline-block;
 }
