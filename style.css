@@ -1,37 +1,143 @@
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+/*colors*/
+:root {
+  --black: #0A0A0F;
+  --cyan: #00B4D8;
+  --white: #F8F9FA;
+  --void: #1A1A2E;
+  --space: #16213E;
+  --royal: #0F3460;
+  --aqua: #00F5D4;
+  --coral: #FF6B6B;
+  --yellow: #FFD93D;
+  --Teal: #95E1D3;
+  --gray: #ADB5BD;
+  --purple: #6C63FF;
+  --green: #2EC4B6;
+  --orange: #FF9F1C;
+  --crimson: #E71D36;
 }
+/*colors end*/
 
+*{
+    margin: 0;
+    padding: 0;
+}
 .fa-code {
     color: #00F0FF; /* Your signature cyan */
     font-size: 2rem;
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* Glow effect */
-}
-.VW {
-    color: #2EC4B6;
-    
 }
 
 body {
     font-family: 'Inter', 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #F8F9FA;
-  background: #0A0A0F;
+  color: var(--white);
+  background: var(--black);
   line-height: 1.6;
   text-align: left;
+  min-height: 100vh;
 }
-nav ul {
-    font-weight: bold;
+
+/*navigation*/
+nav {
+  position: sticky;
+  padding: 5px;
+  background: rgba(10,10,15,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
 }
-li {
+
+nav ul{
+    width: 100%;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #00B4D8;
+}
+
+nav li:first-child{
+    margin-right: auto;
 }
 .works{
     color: #F8F9FA;
 }
-li a {
-    color: #00B4D8;
-    text-decoration: none;
-    display: inline-block;
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 200px;
+    z-index: 999;
+    background: rgba(10,10,15,0.8);
+  backdrop-filter: blur(10px);
+    box-shadow: 15px 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 8px 0 0 8px;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+/*navigation ends*/
+
+button > box {
+    background: linear-gradient(135deg, #7B2FFF 0%, #00D4FF 100%);
+    color-scheme: #2EC4B6;
+}
+button:active {
+  transform: scale(0.95);
+}
+.arrow{
+    position: fixed;
+    cursor: pointer;
+}
+.menu-botton{
+    display: none;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding-block: 15px;
+        position: fixed;
+        cursor: pointer;
+}
+@media(max-width: 800px) {
+    .hidesidebar{
+        display: none;
+    }
+    .menu-botton{
+        display: block;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        padding-block: 15px;
+        right: 0;
+        position: fixed;
+        cursor: pointer;
+    }
+    
+}
+.reload{
+    font-size: 22px;
+    font-weight: 800;
 }

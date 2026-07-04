@@ -20,9 +20,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Build With Victor | VictorWorks">
     <meta name="twitter:description" content="We don't just build systems. We engineer them.">
-    <meta name="twitter:image" content="https://victorworks-veya.netlify.app/assets/images/og-veyastack.png">
+    <meta name="twitter:image" content="https://victorworks-veya.netlify.app/og-veyastack.png">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.google.com">
@@ -33,14 +33,36 @@
 <header>
   <nav>
     <ul>
-      <li><a href="#"><span class="works">Victor</span>Works</a></li>
+      <li><a href="victorworks" class="reload"><span class="works">Victor</span>Works</a></li>
+      <li class="hidesidebar"><a href="index.html">Home</a></li>
+      <li class="hidesidebar"><a href="skills.html">Skills</a></li>
+      <li class="hidesidebar"><a href="about.html">About</a></li>
+      <li class="hidesidebar"><a href="contact.html">Contact</a></li>
+      <li class="menu-botton" onclick=shownav()><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    
+    <ul class="sidebar">
+       <li onclick=hidenav()><a href="#" ><svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F0F0F0"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg></svg></a></li>
+
+      <li><a href="victorworks" class="reload"><span class="works">Victor</span>Works</a></li>
       <li><a href="index.html">Home</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-    </ul>
+         </ul>
   </nav>
 </header>
+
+<script>
+  function shownav(){
+    const sidebar = document.querySelector ('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+function hidenav(){
+    const sidebar = document.querySelector ('.sidebar')
+    sidebar.style.display = 'none'
+}
+</script>
 </body>
 
 </html>

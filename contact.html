@@ -13,10 +13,10 @@
     <meta property="og:title" content="Let’s Talk Money | VictorWorks">
     <meta property="og:description" content="Tell me your idea, I'll tell you the plan. Get a custom web engineering quote.">
     <meta property="og:url" content="https://victorworks-veya.netlify.app/contact">
-    <meta property="og:image" content="https://victorworks-veya.netlify.app/assets/images/og-veyastack.png">
+    <meta property="og:image" content="https://victorworks-veya.netlify.app/og-veyastack.png">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.google.com">
@@ -26,16 +26,46 @@
 
 <body>
   <header>
-    <nav>
+  <nav>
     <ul>
-      <li><a href="#"><span class="works">Victor</span>Works</a></li>
+      <li><a href="victorworks" class="reload"><span class="works">Victor</span>Works</a></li>
+      <li class="hidesidebar"><a href="index.html">Home</a></li>
+      <li class="hidesidebar"><a href="skills.html">Skills</a></li>
+      <li class="hidesidebar"><a href="about.html">About</a></li>
+      <li class="hidesidebar"><a href="contact.html">Contact</a></li>
+      <li class="menu-botton" onclick=shownav()><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    
+    <ul class="sidebar">
+       <li onclick=hidenav()><a href="#" ><svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F0F0F0"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg></svg></a></li>
+
+      <li><a href="victorworks" class="reload"><span class="works">Victor</span>Works</a></li>
       <li><a href="index.html">Home</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-    </ul>
+         </ul>
   </nav>
 </header>
+
+<div style="position:fixed; bottom:0; left:0; right:0; background:#0A0A0F; border-top:2px solid #00B4D8; padding:12px; z-index:9999;">
+  <a href="https://wa.me/2348135834000" style="display:block; background: linear-gradient(135deg, #00D4FF 0%, #7B2FFF 115%);
+    color-scheme: #2EC4B6; color:#0A0A0F; text-align:center; padding:14px; border-radius:50px; font-weight:800; text-decoration:none;">
+    Chat Victor Now - Build Your Site
+  </a>
+</div>
+
+
+<script>
+  function shownav(){
+    const sidebar = document.querySelector ('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+function hidenav(){
+    const sidebar = document.querySelector ('.sidebar')
+    sidebar.style.display = 'none'
+}
+</script>
 </body>
 
 </html>
