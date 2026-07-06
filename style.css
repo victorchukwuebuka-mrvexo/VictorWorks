@@ -21,6 +21,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .fa-code {
     color: #00F0FF; /* Your signature cyan */
@@ -67,11 +68,43 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #00B4D8;
+    color: var(--cyan);
+    cursor: pointer;
 }
 
 nav li:first-child{
     margin-right: auto;
+}
+ul > .navhover:after{
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background: var(--cyan);
+   display: block; 
+   margin-left: 7px;
+     transition: 0.5s;
+}
+ul > .navhover:hover:after{
+    width: 30px;
+    display: block;
+      transition: 0.5px;
+}
+ul > .hidesidebar:after{
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background: var(--cyan);
+   display: block; 
+   margin: auto;
+   transition: 0.5s;
+}
+ul > .hidesidebar:hover:after{
+    width: 30px;
+    display: block;
+    transition: 0.5px;
+}
+.hidesidebar{
+    text-align: left;
 }
 .works{
     color: #F8F9FA;
@@ -86,11 +119,12 @@ nav li:first-child{
     background: rgba(10,10,15,0.8);
   backdrop-filter: blur(10px);
     box-shadow: 15px 0 15px rgba(0,0,0,0.1);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border-radius: 8px 0 0 8px;
+  border-radius: 9px 0 0 9px;
+  animation: slideIn 0.5s ease;
 }
 .sidebar li{
     width: 100%;
@@ -107,11 +141,9 @@ button > box {
 button:active {
   transform: scale(0.95);
 }
-.arrow{
-    position: fixed;
-    cursor: pointer;
-}
-.menu-botton{
+
+@media (min-width: 600px) {
+    .menu-botton{
     display: none;
         padding: 0;
         top: 0;
@@ -120,10 +152,17 @@ button:active {
         padding-block: 15px;
         position: fixed;
         cursor: pointer;
+    }
+.arrow{
+    position: fixed;
+    cursor: pointer;
 }
-@media(max-width: 800px) {
+
+}
+@media(max-width: 599px) {
     .hidesidebar{
         display: none;
+        cursor: pointer;
     }
     .menu-botton{
         display: block;
@@ -135,9 +174,54 @@ button:active {
         position: fixed;
         cursor: pointer;
     }
-    
 }
 .reload{
     font-size: 22px;
     font-weight: 800;
+    padding: 0;
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+}
+.shade{
+    width: 90%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    min-height: 200px;
+}
+.shade p{
+    font-size: 13px;
+    color: var(--cyan);
+    font-weight: bold;
+}
+.shade h1{
+    font-weight: 1000;
+    font-size: 45px;
+}
+.shade div{
+    width: 135px;
+    height: 135px;
+    border-radius: 25%;
+    border: 2px solid var(--royal);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 15px 0 15px rgba(0,0,0,0.1);
+    background-color: var(--royal);
+}
+
+.victorimg{
+    height: 125px;
+    width: 125px;
+    border-radius: 30%;
+    position: absolute;
+    border: 2px solid var(--Teal);
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 15px 0 15px rgba(0,0,0,0.1);
 }
