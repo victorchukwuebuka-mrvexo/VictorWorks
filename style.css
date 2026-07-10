@@ -35,14 +35,16 @@ body {
   font-weight: 400;
   color: var(--white);
   background: var(--black);
+  justify-content: center;
   line-height: 1.6;
+  align-items: center;
   text-align: left;
   min-height: 100vh;
 }
 
 /*navigation*/
 nav {
-  position: sticky;
+    position: fixed;
   padding: 5px;
   background: rgba(10,10,15,0.8);
   backdrop-filter: blur(10px);
@@ -50,6 +52,7 @@ nav {
   display: flex;
   justify-content: space-between;
   font-weight: bolder;
+  width: 100%;
 }
 
 nav ul{
@@ -116,7 +119,7 @@ ul > .hidesidebar:hover:after{
     height: auto;
     width: 200px;
     z-index: 999;
-    background: rgba(10,10,15,0.8);
+    background: rgba(10,10,15,1.5);
   backdrop-filter: blur(10px);
     box-shadow: 15px 0 15px rgba(0,0,0,0.1);
   display: none;
@@ -136,7 +139,7 @@ ul > .hidesidebar:hover:after{
 
 button > box {
     background: linear-gradient(135deg, #7B2FFF 0%, #00D4FF 100%);
-    color-scheme: #2EC4B6;
+    color-scheme: var(--coral);
 }
 button:active {
   transform: scale(0.95);
@@ -184,16 +187,15 @@ button:active {
   from { transform: translateX(100%); opacity: 0; }
 }
 .shade{
-    width: 90%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 70px 20px;
+   padding-bottom: 15px;
 }
 .shade p{
-    font-size: 13px;
+    font-size: 14px;
     color: var(--cyan);
     font-weight: bold;
 }
@@ -202,26 +204,126 @@ button:active {
     font-size: 45px;
 }
 .shade div{
-    width: 135px;
-    height: 135px;
-    border-radius: 25%;
-    border: 2px solid var(--royal);
+    width: 150.5px;
+    height: 150.5px;
+    border-radius: 160% 80% 160% 80% / 80% 160% 80% 160%;
+    background: linear-gradient(255deg, rgba(76, 176, 253, 0.7), rgba(0, 174, 248, 0.4));
+    
+    border: 1.5px solid var(--royal);
     align-items: center;
     display: flex;
+    margin-bottom: 20px;
+    position: relative;
     justify-content: center;
-    background: rgba(10,10,15,0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 15px 0 15px rgba(0,0,0,0.1);
-    background-color: var(--royal);
+    backdrop-filter:  blur(12px);
+    box-shadow: 0 0 120px rgba(0, 242, 254, 0.1);
 }
 
 .victorimg{
-    height: 125px;
-    width: 125px;
+    height: 135px;
+    width: 135px;
     border-radius: 30%;
+    object-fit: cover;
+    border: 3px solid var(--Teal);
+    background-color: var(--black);
+}
+.avatar{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+}
+.aang{
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s ease;
+    color: var(--white);
+    text-decoration: none;
+}
+.toph{
+    border: 0.5px solid var(--cyan);
+    background: transparent;
+}
+.kitara{
+    border: 1px solid var(--cyan);
+    background: linear-gradient(370deg, rgba(79, 172, 254, 0.3), var(--royal) 11px, var(--aqua) 160.5%, rgba(0, 242, 254, 0.3));
+}
+.aang:hover{
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        transform: translateY(-2px);
+         cursor: pointer;
+}
+.flyer-div{
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.flyer-text{
+    font-weight: 700;
+    font-size: 25px;
+}
+.flyer{
+    height: 300px;
+    width: 235px;
+    border: 0.6px solid var(--cyan);
+    border-radius: 10px;
+    background: transparent;
+    transition: 0.3s ease;
+    display: flex;
+    backdrop-filter:  blur(12px);
+    
+}
+.worker{
+    color: var(--cyan);
+}
+.flyer .text{
+    font-weight: 800;
+    padding: 8px;
+    font-size: 12px;
+}
+.flyer:hover{
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        transform: translateY(-2px);
+         cursor: pointer;
+}
+.flyer-top{
+    width: 35%;
+    border-radius: 15px;
+    white-space: nowrap;
+    margin-left: 60%;
+    margin-top: 8px;
+    border: 0.3px solid var(--cyan);
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.3px 10px;
+    font-size: 10px;
     position: absolute;
-    border: 2px solid var(--Teal);
-    background: rgba(10,10,15,0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 15px 0 15px rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, var(--royal) 4px, var(--cyan) 150px);
+    transition: 0.3s ease;
+    
+}
+.flyer-top:hover{
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+        transform: translateY(-1.5px);
+         cursor: pointer;
+}
+.sokka{
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: -85px;
+    margin-top: 13px;
+    padding: 25px;
+}
+.suri{
+    color: var(--cyan);
+}
+
+.unknown{
+    box-shadow: 0 0 155px rgba(0, 242, 254, 0);
 }
