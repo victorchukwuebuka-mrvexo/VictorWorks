@@ -275,7 +275,7 @@ button:active {
     font-size: 25px;
 }
 .flyer{
-    height: 515px;
+    height: auto;
     max-width: 280px;
     border: 0.5px solid var(--royal);
     background: rgba(25, 30, 45, 0.45);
@@ -343,7 +343,7 @@ button:active {
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: linear-gradient(45deg, var(--space) 30%, var(--cyan) 250%);
     border-radius: 10px;
-    height: 140px;
+    height: auto;
     width: 100px;
     padding: 5px 0 0 20px;
       box-shadow: 0 5px  5px 0 var(--royal);
