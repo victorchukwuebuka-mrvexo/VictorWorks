@@ -15,6 +15,7 @@
   --green: #2EC4B6;
   --orange: #FF9F1C;
   --crimson: #E71D36;
+  --glass-text: #8a99ad;
 }
 /*colors end*/
 
@@ -186,6 +187,12 @@ button:active {
 @keyframes slideIn {
   from { transform: translateX(100%); opacity: 0; }
 }
+.alignment{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 .shade{
     display: flex;
     flex-direction: column;
@@ -238,7 +245,6 @@ button:active {
     padding: 8px 20px;
     font-size: 0.9rem;
     font-weight: 600;
-    white-space: nowrap;
     transition: 0.3s ease;
     color: var(--white);
     text-decoration: none;
@@ -262,20 +268,24 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 .flyer-text{
     font-weight: 700;
     font-size: 25px;
 }
 .flyer{
-    height: 300px;
-    width: 235px;
-    border: 0.6px solid var(--cyan);
-    border-radius: 10px;
-    background: transparent;
+    height: 500px;
+    max-width: 280px;
+    border: 0.5px solid var(--royal);
+    background: rgba(25, 30, 45, 0.45);
     transition: 0.3s ease;
-    display: flex;
     backdrop-filter:  blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
     
 }
 .worker{
@@ -283,7 +293,6 @@ button:active {
 }
 .flyer .text{
     font-weight: 800;
-    padding: 8px;
     font-size: 12px;
 }
 .flyer:hover{
@@ -293,19 +302,17 @@ button:active {
 }
 .flyer-top{
     width: 35%;
-    border-radius: 15px;
+    border-radius: 10px;
     white-space: nowrap;
-    margin-left: 60%;
-    margin-top: 8px;
     border: 0.3px solid var(--cyan);
     text-decoration: none;
     color: var(--white);
-    font-weight: 500;
-    padding: 0.3px 10px;
+    font-weight: 700;
     font-size: 10px;
-    position: absolute;
     background: linear-gradient(45deg, var(--royal) 4px, var(--cyan) 150px);
     transition: 0.3s ease;
+    text-align: center;
+    margin: -20px 0 0 70%;
     
 }
 .flyer-top:hover{
@@ -314,16 +321,181 @@ button:active {
          cursor: pointer;
 }
 .sokka{
-    font-size: 20px;
+    font-size: 1.5rem;
+    margin: 5px 0 5px 0;
     font-weight: 800;
-    margin-left: -85px;
-    margin-top: 13px;
-    padding: 25px;
+}
+.flyer-tag{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.flyer-details{
+    display: flex;
+    padding: 12px;
+    min-height: 300px;
+    gap: 20px;
+    width: 250px;
+    margin-left: -7px;
+    flex-wrap: wrap;
+}
+.flyer-details .box{
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(45deg, var(--space) 30%, var(--cyan) 250%);
+    border-radius: 10px;
+    height: 130px;
+    width: 100px;
+    padding: 5px 0 0 20px;
+      box-shadow: 0 5px  5px 0 var(--royal);
+  backdrop-filter: blur(50px);
+}
+.box p{
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--cyan);
+}
+.box li{
+    padding: 2px 0 0 0;
+    font-size: 11px;
+    color: var(--white);
+    font-weight: 500;
+}
+.french{
+    width: 100%;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--cyan);
+    background: linear-gradient(4deg, var(--royal) 20%, var(--aqua) 150%);
+    text-align: center;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.french:hover{
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+        transform: translateY(-2px);
+         cursor: pointer;
 }
 .suri{
     color: var(--cyan);
 }
-
+.piller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  padding: 24px;
+  max-width: auto;
+  backdrop-filter: blur(12px); /* Blurred glass effect */
+}
+.piller-veya{
+    color: var(--glass-text);
+  font-size: 0.85rem;
+  line-height: 1rem;
+  font-weight: 500;
+  
+}
+.piller-phase{
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0 0 3px 0;
+}
+.piller-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    min-width: 110%;
+}
+.pillers-text{
+    text-align: left;
+  display: flex;
+  background: rgba(25, 30, 45, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-direction: column;
+  border-radius: 10px;
+    height: 100px;
+    width: 109px;
+    padding: 5px 0 0 20px;
+  backdrop-filter: blur(50px);
+}
+.pillers-text h3{
+    font-size: 1.1rem;
+  margin: 0 0 1px 0;
+  font-weight: 600;
+}
+.pillers-text p{
+    color: var(--glass-text);
+  font-size: 0.65rem;
+  line-height: 1.3;
+  margin: 0 0 2px 0;
+}
+.pillers-text.grind{
+    border: 1.5px solid var(--royal);
+    backdrop-filter: blur(50pc);
+    box-shadow: 0 5px 10px 0.5px var(--royal);
+}
+.pillers-text:hover{
+    border: 1.5px solid var(--royal);
+    backdrop-filter: blur(50pc);
+    box-shadow: 0 5px 10px 0.5px var(--royal);
+}
+.pillers-text.grind:hover{
+    background: rgba(25, 30, 45, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+footer{
+    display: flex;
+    bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
+    border-top: 1px solid var(--void);
+    color: var(--glass-text);
+    font-size: 14px;
+}
+.footer-image{
+    height: 25px;
+    width: 25px;
+}
+.footer-label{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+}
+.f-label{
+    display: flex;
+    flex-direction: nowrap;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+footer p{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--glass-text);
+}
+.f-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.f-bottom.way{
+     font-size: 14px;
+    color: #888;
+    font-weight: 400;
+}
+.vw{
+    text-decoration: none;
+}
 .unknown{
     box-shadow: 0 0 155px rgba(0, 242, 254, 0);
 }
