@@ -232,7 +232,10 @@ button:active {
     width: 135px;
     border-radius: 30%;
     object-fit: cover;
-    border: 3px solid var(--Teal);
+    border: 3px solid transparent;
+    background-image: linear-gradient(#222, #222), linear-gradient(250deg, #00f0ff);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
     background-color: var(--black);
 }
 .avatar{
