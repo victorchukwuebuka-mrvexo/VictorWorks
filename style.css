@@ -508,7 +508,7 @@ footer p{
 }
 .f-bottom.way{
      font-size: 14px;
-    color: #888;
+    color: var(--cyan);
     font-weight: 400;
 }
 .vw{
