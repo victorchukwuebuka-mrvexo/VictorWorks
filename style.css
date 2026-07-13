@@ -365,6 +365,10 @@ button:active {
     color: var(--white);
     font-weight: 500;
 }
+.box li::marker{
+    color: var(--cyan);
+    font-size: 10px;
+}
 .french{
     width: 100%;
     color: var(--white);
