@@ -915,11 +915,10 @@ footer p{
 }
 .pillar-fa{
     font-size: 30px;
-  color: var(--royal);
+  color: var(--deep-electric);
   margin-bottom: 12px;
   /* Neon glow effect matching Veya aesthetic */
-  text-shadow: 0 0 12px rgba(0, 212, 255, 0.8),
-               0 0 24px rgba(0, 212, 255, 0.4);
+  
 }
 
 .pillar-divider {
