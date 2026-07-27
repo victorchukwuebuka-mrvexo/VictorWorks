@@ -428,6 +428,7 @@ button:active {
     box-shadow: 0 5px 10px 0.5px var(--royal);
 }
 .pillers-text:hover{
+    transition: 0.3s ease;
     border: 1.5px solid var(--royal);
     backdrop-filter: blur(50pc);
     box-shadow: 0 5px 10px 0.5px var(--royal);
@@ -748,6 +749,7 @@ footer p{
   width: 100%;
 }
 .veya-div:hover{
+    transition: 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
         transform: scale(0.8);
   transform-origin: center;
@@ -933,12 +935,13 @@ footer p{
 }
 
 .spe{
-    padding-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 25px;
+    padding: 2rem;
+    gap: 20px;
+    border-top: 0.5px solid var(--royal);
 }
 .spe-port{
     display: flex;
@@ -965,9 +968,11 @@ footer p{
 }
 .spe-port-box:hover{
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px 0 rgba(0, 210, 240, 0.2);
+    transition: 0.3s ease;
     border: 1px solid var(--soft-teal);
+    box-shadow: 0 0 15px 0 rgba(0, 250, 280, 0.3);
 }
+
 .spe-img{
     width: 100%;
     height: 80%;
@@ -1000,6 +1005,7 @@ footer p{
   flex-direction: column;
 }
 .matrix-card:hover {
+    transition: 0.3s ease;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px 0 rgba(0, 210, 240, 0.2);
     border: 1px solid var(--soft-teal);
@@ -1198,6 +1204,7 @@ footer p{
 
 }
 .skill-cst:hover{
+    transition: 0.2s ease;
     border: 1px solid var(--soft-teal);
     transform: tramslateY(-2);
 }
@@ -1309,6 +1316,8 @@ footer p{
     border-radius: 15px;
 }
 .link-row a:hover{
+    text-decoration: underline;
+    transition: 0.2s ease;
     transform: translateY(-2px);
     box-shadow: 0 0 15px rgba(0, 250, 264, 0.3);
 }
